@@ -5,9 +5,7 @@ def key_for_min_value(name_hash)
   if name_hash != {}
     keys = ""
     name_hash.collect do |key, value|
-      if keys == ""
-        keys = key
-      elsif name_hash[keys] > value
+      if keys == "" || name_hash[keys] > value
           keys = key
       end
     end
